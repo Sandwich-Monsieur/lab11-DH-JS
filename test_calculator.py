@@ -24,7 +24,7 @@ class TestCalculator(unittest.TestCase):
     def test_divide(self): # 3 assertions
         self.assertEqual(div(4,2), 0.5)
         self.assertEqual(div(-4,2), -0.5)
-        self.assertEqual(div(0, 4), ZeroDivisionError)
+        self.assertRaises(ZeroDivisionError, div, 0, 0)
 
 #     # ##########################
 
@@ -49,14 +49,14 @@ class TestCalculator(unittest.TestCase):
             logarithm(0, -5)
 
     def test_hypotenuse(self): # 3 assertions
-        self.assertEqual(hypotenuse(2,2), 2)
-        self.assertEqual(hypotenuse(-2,2), 2)
-        self.assertEqual(hypotenuse(0, 2), 0)
+        self.assertEqual(hypotenuse(3,4), 5)
+        self.assertEqual(hypotenuse(-3,4), 5)
+        self.assertEqual(hypotenuse(0, 2), 2)
 
     def test_sqrt(self): # 3 assertions
         self.assertRaises(ValueError, square_root, -1)
         self.assertEqual(square_root(0), 0)
-        self.assertEqual(square_root(2), 4)
+        self.assertEqual(square_root(4), 2)
     ##########################
 
 # Do not touch this
