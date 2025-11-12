@@ -20,6 +20,6 @@ def exp(a, b): return a**b
 
 # First example
 def add(a, b): 
-    pass
+    return
 
 
