@@ -32,7 +32,7 @@ def div(a, b):
 def logarithm(a, b):
     if b <= 0:
         raise ValueError
-    return logarithm(b, a)# use math library + raise ValueError
+    return math.log(b, a)# use math library + raise ValueError
 
 def exp(a, b): return a**b
 
