@@ -3,17 +3,23 @@
 #Partner 2: Jose Serrano
 
 import math
-def add(a, b): a + b
+def add(a, b): return a + b
 
-def sub(a, b): a - b
+def sub(a, b): return a - b
 
-def mul(a, b): a * b
+def mul(a, b): return a * b
 
-def div(a, b): b / a # raise ZeroDivisionError if a == 0
+def div(a, b):
+    if a == 0:
+        raise ZeroDivisionError
+    return b / a # raise ZeroDivisionError if a == 0
 
-def log(a, b): loga(b)# use math library + raise ValueError
+def log(a, b):
+    if b <= 0:
+        raise ValueError
+    return log(b, a)# use math library + raise ValueError
 
-def exp(a, b): a^b
+def exp(a, b): return a**b
 
 """
 calculator.py
