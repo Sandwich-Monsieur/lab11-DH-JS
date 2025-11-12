@@ -29,7 +29,7 @@ def div(a, b):
         raise ZeroDivisionError
     return b / a # raise ZeroDivisionError if a == 0
 
-def log(a, b):
+def logarithm(a, b):
     if b <= 0:
         raise ValueError
     return log(b, a)# use math library + raise ValueError
