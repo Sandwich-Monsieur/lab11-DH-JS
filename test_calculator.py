@@ -9,14 +9,14 @@ from calculator import *
 class TestCalculator(unittest.TestCase):
     #Partner 2
     def test_add(self): # 3 assertions
-        self.assertEqual(calculator.add(1, 2), 3)
-        self.assertEqual(calculator.add(5, 0), 5)
-        self.assertEqual(calculator.add(-1, -1), -2)
+        self.assertEqual(add(1, 2), 3)
+        self.assertEqual(add(5, 0), 5)
+        self.assertEqual(add(-1, -1), -2)
 
     def test_subtract(self): # 3 assertions
-        self.assertEqual(calculator.sub(5, 3), 2)
-        self.assertEqual(calculator.sub(10, 0), 10)
-        self.assertEqual(calculator.sub(0, 5), -5)
+        self.assertEqual(subtract(5, 3), 2)
+        self.assertEqual(subtract(10, 0), 10)
+        self.assertEqual(subtract(0, 5), -5)
     # ##########################
 
     ######## Partner 1
@@ -34,18 +34,18 @@ class TestCalculator(unittest.TestCase):
     #Partner 2
     def test_divide_by_zero(self): # 1 assertion
     #     # call division function inside, example:
-    with self.assertRaises(ZeroDivisionError):
-        calculator.div(0, 10)  # a=0, b=10
+        with self.assertRaises(ZeroDivisionError):
+            div(0, 10)  # a=0, b=10
     #     fill in code
 
     def test_logarithm(self): # 3 assertions
-        self.assertAlmostEqual(calculator.log(10, 100), 2.0)  # log_a(b)
-        self.assertAlmostEqual(calculator.log(math.e, math.e), 1.0)
-        self.assertAlmostEqual(calculator.log(4, 2), 0.5)
+        self.assertAlmostEqual(logarithm(10, 100), 2.0)  # log_a(b)
+        self.assertAlmostEqual(logarithm(math.e, math.e), 1.0)
+        self.assertAlmostEqual(logarithm(4, 2), 0.5)
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
-            calculator.log(0, 5)
+            logarithm(0, 5)
     # ##########################
     
     ######## Partner 1
